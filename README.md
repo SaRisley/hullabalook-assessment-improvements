@@ -15,6 +15,14 @@ You will be assessed on both behaviour and design. Don't spend more than 2 hours
 
 ## On reflection
 
+Although I have done quite a bit of frontend work with javascript, Vue was completely new to me and so I spent the days prior to completing this assement experimenting with the framework. 
+
+In the starter code, the products were provided in a file as JSON and passed to the componenets as props, however, I felt my design would work more effectiently if I could set the products as global state. Therfore, I moved them into a reactive store which allowed for reference from all areas of the component treen independently.
+
+I tired to keep my grandchild compenents simplistic, redering only their templates and updating state as necessary. The ProductGrid compenent holds the bulk of my code. It is responsible for filtering, sorting and ensuring the items are rendered correctly.
+
+On reflection, had I had more time and felt a little more confident with Vue, I would have tried to seperate out the filtering and sorting functions into their respective components. However, with limited time I kept them together to allow for an MVP with all requested funcationality. 
+
 My initial component plan:
 ![Alt text](readme-imgs/PLPcompplan.png)
 

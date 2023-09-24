@@ -26,6 +26,8 @@ import ItemCounter from './ItemCounter.vue';
 	align-content: center;
 	margin-top: 5%;
 	margin-bottom: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
 	border-width: 5px;
 	border-color: #000000;
 	border-style: solid;
