@@ -13,8 +13,13 @@ Write functionality and styling to:
 
 You will be assessed on both behaviour and design. Don't spend more than 2 hours on this.
 
-## Instructions
+## On reflection
 
-To start, fork [this](https://stackblitz.com/edit/vue-hulla-ta) project and set the project name to include your name. When you're finished, connect this to your GitHub account, push the changes and email the links to the repo and this project back to us.
+My initial component plan:
+![Alt text](readme-imgs/PLPcompplan.png)
 
-If you wish to continue past the allocated time, please create another fork.
+My initial design plan:
+![Alt text](readme-imgs/PLPdesign.png)
+
+Here is a screenshot of the mvp after the two hours allocated:
+![Alt text](<readme-imgs/Screenshot 2023-09-24 at 16.03.46.png>)
