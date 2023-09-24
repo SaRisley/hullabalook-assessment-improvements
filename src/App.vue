@@ -1,81 +1,18 @@
-<template>
-  <div class="app" ref="app-container">
-    <div class="task">
-      <h2>Welcome to the Hullabalook Technical Assessment</h2>
-      <p>
-        You are provided with a set of products and are required to create a
-        products listing page for a footwear retailer.<br />
-        Write functionality and styling to:
-      </p>
-      <ol>
-        <li>Lay out all products in a responsive product grid</li>
-        <li>Create a filter toggle that shows only available products</li>
-        <li>
-          Create a checkbox brand filter that shows only toggled brand products
-        </li>
-        <li>Add a counter for the number of resulting products</li>
-        <li>
-          Create a dropdown to sort all products into ascending or descending
-          price order
-        </li>
-        <li>
-          Add an option to sort all products by relevance - with all available
-          products shown first in ascending rank order, then all unavailable
-          products in ascending rank order.
-        </li>
-      </ol>
-      <p>
-        You will be assessed on both behaviour and design. Don't spend more than
-        2 hours on this.
-      </p>
-
-      <h3>Instructions</h3>
-      <p>
-        To start, fork
-        <a
-          class="link"
-          href="https://stackblitz.com/edit/vue-hulla-ta"
-          target="_blank"
-          >this</a
-        >
-        project and set the project name to include your name. When you're
-        finished, connect this to your GitHub account, push the changes and
-        email the links to the repo and this project back to us.
-        <br />
-        If you wish to continue past the allocated time, please create another
-        fork.
-      </p>
-      <hr />
-    </div>
-
-    <div class="filters">
-      <h3>Filters</h3>
-      <div></div>
-    </div>
-
-    <div class="product-grid">
-      <ProductGridItem :product="products[0]" />
-      <ProductGridItem :product="products[1]" />
-    </div>
-  </div>
-</template>
-
-<script>
+<script setup>
 import ProductGridItem from './components/ProductGridItem.vue';
-import products from './data/products.json';
-
-export default {
-  name: 'App',
-  components: {
-    ProductGridItem,
-  },
-  data() {
-    return {
-      products,
-    };
-  },
-};
+import ToolBar from './components/ToolBar.vue';
 </script>
+
+<template>
+  <main>
+    <header>
+      <h1 class="fancytitle">Product Listing Page</h1>
+      <h2 class="fancysubtitle">by Sarah Risley </h2>
+    </header>
+    <ToolBar/>
+    <ProductGridItem/>
+  </main>    
+</template>
 
 <style>
 .app {
@@ -86,7 +23,105 @@ export default {
   color: #606569;
 }
 
-.link {
-  color: #3a7f71;
+.fancytitle {
+	font-weight: normal;
+	font-size: 4.5em;
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: black;
+	cursor: pointer;
+	width: 605px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: #CA4246;
+	
+    background-image: linear-gradient(
+        45deg,
+        #c500ab 16.666%, 
+        #9500ff 16.666%, 
+        #4166e1 33.333%, 
+        #77ff00 33.333%, 
+        #77ff00 50%, 
+        #ffb300 50%, 
+        #ffb300 66.666%, 
+        #E16541 66.666%, 
+        #ff0008 83.333%, 
+        #ff0008 83.333%);
+	
+	background-size: 100%;
+	background-repeat: repeat;
+  
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+
+	animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+  }
+  
+  .fancytitle:hover{
+	animation: rainbow-text-simple-animation 0.5s ease-out forwards;
 }
+
+.fancysubtitle {
+	font-weight: normal;
+	font-size: 3em;
+	text-align: center;
+	text-decoration-color: black;
+	cursor: pointer;
+	width: 605px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: #CA4246;
+	
+    background-image: linear-gradient(
+        45deg,
+        #c500ab 16.666%, 
+        #9500ff 16.666%, 
+        #4166e1 33.333%, 
+        #77ff00 33.333%, 
+        #77ff00 50%, 
+        #ffb300 50%, 
+        #ffb300 66.666%, 
+        #E16541 66.666%, 
+        #ff0008 83.333%, 
+        #ff0008 83.333%);
+	
+	background-size: 100%;
+	background-repeat: repeat;
+  
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+
+	animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+  }
+  
+  .fancysubtitle:hover{
+	animation: rainbow-text-simple-animation 0.5s ease-out forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+  @keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
+
 </style>
