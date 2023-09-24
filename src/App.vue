@@ -1,6 +1,7 @@
 <script setup>
 import ProductGridItem from './components/ProductGridItem.vue';
 import ToolBar from './components/ToolBar.vue';
+import ScrollToTop from './components/ScrollToTop.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import ToolBar from './components/ToolBar.vue';
     </header>
     <ToolBar/>
     <ProductGridItem/>
+    <ScrollToTop/>
   </main>    
 </template>
 

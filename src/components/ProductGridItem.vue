@@ -2,6 +2,7 @@
 import { store } from '../data/store';
 import { watch } from 'vue';
 
+
 const filterByStock = () =>{
     if (store.filteredBy){
         return store.products.filter(x => x.isAvailable === true);
@@ -66,7 +67,7 @@ watch(
                     <p class="prodtext">{{ product.brand }}</p>
                     <p class="prodtext">£{{ product.price }}</p>
                 </div>
-        </div>
+            </div>
     </main>
 </template>
 
